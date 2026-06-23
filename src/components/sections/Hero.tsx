@@ -1,6 +1,6 @@
 // src/components/sections/Hero.tsx
 import { useState } from "react";
-import { Check, Smartphone, Lock, CopyCheck, CreditCard, Shield, TrendingUp, Zap, Bot } from "lucide-react";
+import { Smartphone, Lock, CopyCheck, CreditCard, Shield, TrendingUp, Zap, Bot } from "lucide-react";
 import { PrimaryButton } from "../ui/PrimaryButton";
 import { SecondaryButton } from "../ui/SecondaryButton";
 import { RealPhonePreview } from "../ui/RealPhonePreview";

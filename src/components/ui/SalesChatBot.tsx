@@ -10,7 +10,7 @@ interface Message {
 }
 
 // ============================================================
-// ESTRUTURA DE VENDAS
+// ESTRUTURA DE VENDAS - COMPLETA
 // ============================================================
 const SALES_SCRIPT = {
   welcome: (nome: string) => ({
