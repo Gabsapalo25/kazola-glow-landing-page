@@ -1,6 +1,5 @@
 // src/components/ui/RealPhonePreview.tsx
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type PreviewCategory = "dados" | "gerador" | "diario" | "relatorio";
 

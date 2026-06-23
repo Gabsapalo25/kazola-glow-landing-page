@@ -231,7 +231,6 @@ export function SalesChatBot() {
     }
   ]);
   const [input, setInput] = useState('');
-  const [nome, setNome] = useState('');
   const [etapa, setEtapa] = useState<'boas_vindas' | 'acolhimento' | 'mapeamento' | 'historia' | 'apresentacao' | 'prova' | 'fechamento' | 'objeção'>('boas_vindas');
   const [busy, setBusy] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
@@ -284,7 +283,6 @@ export function SalesChatBot() {
     }
 
     if (action === 'pular_nome') {
-      setNome('visitante');
       const welcome = SALES_SCRIPT.welcome('visitante');
       addMessage('bot', welcome.text, welcome.btns);
       setEtapa('mapeamento');
@@ -525,7 +523,6 @@ O que você gostaria de saber primeiro?`, [
     setBusy(true);
 
     if (etapa === 'acolhimento') {
-      setNome(text);
       const welcome = SALES_SCRIPT.welcome(text);
       setTimeout(() => {
         addMessage('bot', welcome.text, welcome.btns);
