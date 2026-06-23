@@ -24,23 +24,19 @@ export function Hero() {
       id="hero-section"
       className="relative min-h-screen overflow-hidden pt-20"
     >
-      {/* Fundo com gradiente mesh animado */}
       <div className="absolute inset-0 bg-[#0a0f1a]">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_50%,rgba(0,240,168,0.12),transparent_50%)] animate-pulse-slow" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(0,240,168,0.08),transparent_40%)] animate-pulse-slow delay-1000" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_80%,rgba(250,204,21,0.05),transparent_50%)] animate-pulse-slow delay-2000" />
       </div>
 
-      {/* Campo de números vivo */}
       <LivingNumberField />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-8 sm:py-12 lg:py-20">
         <div className="grid w-full gap-8 lg:grid-cols-2 lg:gap-12">
           
-          {/* COLUNA ESQUERDA - TEXTO */}
           <div className="flex flex-col justify-center space-y-4">
             
-            {/* Badge "Dados em tempo real" */}
             <div className="inline-flex items-center gap-2 rounded-full border border-[#00f0a8]/30 bg-[#00f0a8]/10 px-3 py-1 text-xs font-bold text-[#00f0a8] w-fit">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00f0a8] opacity-75" />
@@ -68,7 +64,6 @@ export function Hero() {
               {" "}<strong className="text-white">como jogar com mais disciplina</strong>.
             </p>
 
-            {/* Cards de Estatísticas Animados */}
             <div className="grid grid-cols-3 gap-2 sm:gap-3">
               <div className="rounded-xl border border-[#1e293b] bg-[#111827]/50 p-2 sm:p-3 text-center backdrop-blur-sm transition hover:border-[#00f0a8]/40 hover:bg-[#00f0a8]/5">
                 <div className="flex items-center justify-center gap-1 text-[#00f0a8]">
@@ -95,7 +90,6 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Aviso Legal */}
             <div className="flex items-start gap-2 rounded-xl border border-[#facc15]/20 bg-[#facc15]/5 px-3 py-2">
               <Shield className="mt-0.5 h-3 w-3 sm:h-4 sm:w-4 shrink-0 text-[#facc15]" />
               <p className="text-[10px] sm:text-[11px] leading-5 text-amber-100/70">
@@ -105,7 +99,6 @@ export function Hero() {
               </p>
             </div>
 
-            {/* Botões e Formulário */}
             <div className="flex flex-col gap-3 sm:flex-row">
               <PrimaryButton>Criar conta gratuita</PrimaryButton>
               <SecondaryButton href="#funcionalidades">Ver demonstração</SecondaryButton>
@@ -138,7 +131,6 @@ export function Hero() {
             </div>
           </div>
 
-          {/* COLUNA DIREITA - PREVIEW DO APP COM TILT */}
           <div className="hidden lg:flex lg:items-center lg:justify-center">
             <TiltPanel glowColor="rgba(0,240,168,0.15)" className="p-3">
               <div className="relative w-full max-w-[380px]">
@@ -152,7 +144,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* CSS para animações */}
       <style>{`
         @keyframes pulse-slow {
           0%, 100% { opacity: 0.6; transform: scale(1); }
@@ -176,3 +167,4 @@ export function Hero() {
     </section>
   );
 }
+

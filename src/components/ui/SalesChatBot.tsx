@@ -119,7 +119,7 @@ Isso é o que você estava procurando?`,
 
 Então vou te mostrar mais alguns detalhes do que você vai ter acesso:
 
-📊 **Dados Oficiais** — 1.960+ sorteios históricos, atualizados automaticamente a cada hora
+📊 **Dados Oficiais** — 1.960+ sorteios históricos, updated automaticamente a cada hora
 
 🎯 **4 Métodos de Geração** — Equilibrado, Frequência, Padrões Históricos e Monte Carlo
 
@@ -219,6 +219,7 @@ O que acha de experimentar?`,
 export function SalesChatBot() {
   const [open, setOpen] = useState(false);
   const [showGreeting, setShowGreeting] = useState(false);
+  const [, setNome] = useState("");
   const [messages, setMessages] = useState<Message[]>([
     { 
       id: 0, 
@@ -523,6 +524,7 @@ O que você gostaria de saber primeiro?`, [
     setBusy(true);
 
     if (etapa === 'acolhimento') {
+      setNome(text);
       const welcome = SALES_SCRIPT.welcome(text);
       setTimeout(() => {
         addMessage('bot', welcome.text, welcome.btns);
@@ -754,3 +756,4 @@ O que você gostaria de saber primeiro?`;
     </>
   );
 }
+
